@@ -1,0 +1,1 @@
+-wto "d0aec5f9ec4e460194cf8d3a8cb76c28" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "tb_riscv_multicycle_behav" "xil_defaultlib.tb_riscv_multicycle" -log "elaborate.log" 
