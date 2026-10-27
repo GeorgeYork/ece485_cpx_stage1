@@ -20,10 +20,6 @@ architecture Behavioral of instr_mem is
         4 => x"00032503", --       lw x10, 0(x6)    000000000000 00110 010 01010 0000011
         5 => x"007503B3", --       add x7, x10, x7 0000000 00111 01010 000 00111 0110011
         6 => x"FFF28293", --       subi x5, x5, 1 (really addi x5, x5, -1)  111111111111 00101 000 00101 0010011
-        
-        --7 => x"FA0298E3", --     bne x5, x0, loop   1 111101 00000 00101 001 100 x 1 1100011 [jump -20; note: assumes PC is incremented by 4]
-                                                   -- 1111 1010 0000 0010 1001 1000 1110 0011
-												   
 												   -- 2027 change
 												   --[jump -20; note: assumes PC is incremented by 4 and imm 32-bit aligned]
 												   -- -20 == -...10100 => ...11101011 + 1 = ....11101100
@@ -31,15 +27,9 @@ architecture Behavioral of instr_mem is
 												   -- <imm[11]> <imm[9:4]> <5-bit rs2> <5-bit rs1> <3-bit funct3> <imm[3:0]><imm[10]><7-bit opcode>
         7 => x"FE029BE3", --     bne x5, x0, loop  --     1       111111      00000       00101         001          1011      1        1100011  
 		                                           --                 1111 1110 0000      0010         1001          1011 1110 0011
-		                                           --                 1111 1010 0000 0010 1001 1000 1110 0011
-
-                                                   -- Ethan Chapman change ***
-        --8 => x"FF9FF06F", -- done: j done            1 1111111100 1 11111111 00000 1101111  [jump -4; note: assumes PC is incremented by 4]
-                                                           -- 1111 1111 1001 1111 1111 0000 0110 1111  
-                                                                 
-																 --00100 => ....11011 + 1 = ....11100
+		                                           --                 1111 1110 0000 0010 1001 1000 1110 0011
                                                    -- 2027 change ***
-        8 => x"FFFFF06F", -- done: j done              -4 bytes == ...111100 2'comp  [jump -4; note: assumes PC is incremented by 4 and imm is 32-bit aligned]
+        8 => x"FFFFF06F", -- done: j done             -4 bytes == ...111100 2'comp  [jump -4; note: assumes PC is incremented by 4 and imm is 32-bit aligned]
 		                                           -- shift right 2 so 32-bit aligned => ....111111
 												   --<imm[21]> <imm[10:1]> <imm[11]> <imm[19:12]><5-bit rd> <7-bit opcode>
 		                                           --     1    11111111111     1       11111111     00000     1101111 

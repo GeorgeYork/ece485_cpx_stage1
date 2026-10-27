@@ -7,7 +7,7 @@ C:/Users/george.york/Documents/ECE485_code/ece485_cpx_stage1/alu_control.vhdl,17
 C:/Users/george.york/Documents/ECE485_code/ece485_cpx_stage1/control_unit.vhdl,1773112293,vhdl,,,,control_unit,,,,,,,,
 C:/Users/george.york/Documents/ECE485_code/ece485_cpx_stage1/data_mem.vhdl,1749132924,vhdl,,,,data_mem,,,,,,,,
 C:/Users/george.york/Documents/ECE485_code/ece485_cpx_stage1/immediate_generator.vhdl,1792700604,vhdl,,,,immediate_generator,,,,,,,,
-C:/Users/george.york/Documents/ECE485_code/ece485_cpx_stage1/instr_mem.vhdl,1792700600,vhdl,,,,instr_mem,,,,,,,,
+C:/Users/george.york/Documents/ECE485_code/ece485_cpx_stage1/instr_mem.vhdl,1793127919,vhdl,,,,instr_mem,,,,,,,,
 C:/Users/george.york/Documents/ECE485_code/ece485_cpx_stage1/pc.vhdl,1749136078,vhdl,,,,pc_live,,,,,,,,
 C:/Users/george.york/Documents/ECE485_code/ece485_cpx_stage1/reg_file.vhdl,1751555568,vhdl,,,,reg_file,,,,,,,,
 C:/Users/george.york/Documents/ECE485_code/ece485_cpx_stage1/riscv_multicycle.vhdl,1775768336,vhdl,,,,riscv_multicycle,,,,,,,,
